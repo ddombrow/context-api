@@ -17,7 +17,7 @@ import render, { Presentation } from 'melodrama';
 import createTheme from "spectacle/lib/themes/default";
 const theme = createTheme({
   primary: "#b5226e",
-  secondary: "#42b5b4",
+  secondary: "#FFFFFF",
   tertiary: "#FFFFFF",
   qauternary: "#E1E1E1"
 }, {
@@ -48,6 +48,21 @@ const Root = () => (
         textSize={32}
         source={require('raw!./assets/context.example')}
       ></CodePane>
+    </Slide>
+    <Slide>
+      <Heading>Why do you want context?</Heading>
+      <List>
+        <ListItem>For things that don't belong in local state.</ListItem>
+        <ListItem>To avoid the dreaded prop drilling...</ListItem>
+      </List>
+    </Slide>
+    <Slide>
+      <Heading>Some Examples</Heading>
+      <List>
+        <ListItem>Global Application Settings</ListItem>
+        <ListItem>Color Theming</ListItem>
+        <ListItem>Permissions and Flags</ListItem>
+      </List>
     </Slide>
     <Slide>
       <Image width={"600px"} src={stLogo}/><br/>
