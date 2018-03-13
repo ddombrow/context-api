@@ -1,69 +1,42 @@
 import React from "react";
 import { render } from "react-dom";
-import Img from "react-image";
-import Dropdown from "react-dropdown";
-import "react-dropdown/style.css";
-
-const LocalizationContext = React.createContext({
-  distance: "metric",
-  weight: "imperial"
-});
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Example1 from "./components/example1";
+import Example2 from "./components/example2";
 
 class App extends React.Component {
-  state = {
-    locale: {
-      distance: "metric",
-      weight: "metric"
-    }
-  };
-  _onSelectWeight = e => {
-    const newState = Object.assign({}, this.state);
-    newState.locale.weight = e.value;
-    this.setState(newState);
-  };
-  _onSelectDistance = e => {
-    const newState = Object.assign({}, this.state);
-    newState.locale.distance = e.value;
-    this.setState(newState);
-  };
-
   render() {
     return (
-      <div>
-        <LocalizationContext.Provider value={this.state.locale}>
-          <LocalizationContext.Consumer
-            children={ctx => {
-              return (
-                <div style={{ width: "300px" }}>
-                  <Img src="http://i.cubeupload.com/00SevS.jpeg" />
-                  Stats for these puppies:<br />
-                  Average Weight: 3 ({ctx.weight})<br />
-                  Average Length: 10 ({ctx.distance})<br />
-                </div>
-              );
-            }}
-          />
-        </LocalizationContext.Provider>
-        <br />
-        Weight:{" "}
-        <Dropdown
-          options={["metric", "imperial"]}
-          onChange={this._onSelectWeight}
-          value={this.state.locale.weight}
-          defaultOption={this.state.locale.weight}
-          placeholder="Select an option"
-        />
-        <br />
-        Distance:{" "}
-        <Dropdown
-          options={["metric", "imperial"]}
-          onChange={this._onSelectDistance}
-          value={this.state.locale.distance}
-          placeholder="Select an option"
-        />
+      <div className="uk-container">
+        <h1 className="uk-heading-primary">Context Without Constraint</h1>
+        <Router>
+          <div>
+            <ul className="uk-tab">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/example1">Naive Pups</Link>
+              </li>
+              <li>
+                <Link to="/example2">Smarter Pups</Link>
+              </li>
+            </ul>
+
+            <Route exact path="/" component={Home} />
+            <Route exact path="/example1" component={Example1} />
+            <Route exact path="/example2" component={Example2} />
+          </div>
+        </Router>
       </div>
     );
   }
 }
+
+const Home = () => (
+  <div>
+    <h1>Time for some demos!</h1>
+  </div>
+);
 
 render(<App />, document.getElementById("root"));
