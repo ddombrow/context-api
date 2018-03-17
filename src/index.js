@@ -3,11 +3,8 @@ import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Example1 from "./components/example1";
 import Example2 from "./components/example2";
-<<<<<<< HEAD
-=======
 import Example3 from "./components/example3";
 import Example4 from "./components/example3";
->>>>>>> starting to use the store.
 
 class App extends React.Component {
   render() {
