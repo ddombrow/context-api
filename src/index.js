@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Example1 from "./components/example1";
 import Example2 from "./components/example2";
 import Example3 from "./components/example3";
-import Example4 from "./components/example3";
+import Example4 from "./components/example4";
 
 class App extends React.Component {
   render() {
@@ -36,7 +36,6 @@ class App extends React.Component {
             <Route exact path="/example2" component={Example2} />
             <Route exact path="/example3" component={Example3} />
             <Route exact path="/example4" component={Example4} />
-
           </div>
         </Router>
       </div>
@@ -47,6 +46,7 @@ class App extends React.Component {
 const Home = () => (
   <div>
     <h1>Time for some demos!</h1>
+    <h2>Puppy stats 4 ways.</h2>
   </div>
 );
 

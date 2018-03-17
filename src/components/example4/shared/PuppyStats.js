@@ -2,30 +2,37 @@ import React from "react";
 import Img from "react-image";
 import DistanceDisplay from "./DistanceDisplay";
 import WeightDisplay from "./WeightDisplay";
-import { ColorizerConsumer } from "../../../lib/colorizer";
+import ThemeContainer from "../../../lib/state-containers/theme";
+import LocaleContainer from "../../../lib/state-containers/locale";
+import { Subscribe } from "unstated";
 
 const PuppyStats = props => {
   return (
-    <ColorizerConsumer>
-      {theme => {
+    <Subscribe to={[ThemeContainer, LocaleContainer]}>
+      {(theme, locale) => {
         const themedStyles = {
           width: "300px",
           padding: "10px",
-          backgroundColor: theme.background,
-          border: `solid ${theme.border} 1px`
+          backgroundColor: theme.state.background,
+          border: `solid ${theme.state.border} 1px`
         };
         return (
           <div style={themedStyles}>
             <Img src="http://i.cubeupload.com/00SevS.jpeg" />
             <strong>Stats for these puppies:</strong>
             <br />
-            Average Weight: <WeightDisplay value={props.avgWeight} /> <br />
-            Average Length: <DistanceDisplay value={props.avgLength} />
+            Average Weight: <WeightDisplay
+              value={props.avgWeight}
+              format={locale.state.weight}
+            />{" "}
+            <br />
+            Average Length:{" "}
+            <DistanceDisplay value={props.avgLength} format={locale.state.distance} />
             <br />
           </div>
         );
       }}
-    </ColorizerConsumer>
+    </Subscribe>
   );
 };
 

@@ -31,6 +31,7 @@ class Example1 extends React.Component {
   render() {
     return (
       <div>
+        <h2>Naive Pups</h2>
         <LocalizationContext.Provider value={this.state.locale}>
           <LocalizationContext.Consumer
             children={ctx => {
@@ -38,10 +39,8 @@ class Example1 extends React.Component {
                 <div style={{ width: "300px" }}>
                   <Img src="http://i.cubeupload.com/00SevS.jpeg" />
                   Stats for these puppies:<br />
-                  Average Weight:{" "}
-                  <WeightDisplay value={3} localeSetting={ctx.weight} /> <br />
-                  Average Length:{" "}
-                  <DistanceDisplay value={10} localeSetting={ctx.distance} />
+                  Average Weight: <WeightDisplay value={3} localeSetting={ctx.weight} /> <br />
+                  Average Length: <DistanceDisplay value={10} localeSetting={ctx.distance} />
                   <br />
                   <br />
                 </div>

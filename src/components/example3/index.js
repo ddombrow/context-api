@@ -30,13 +30,27 @@ class Example3 extends React.Component {
   };
   _onSelectTheme = e => {
     const newState = Object.assign({}, this.state);
-    newState.theme = e.value;
+    newState.theme = this.themes[e.value];
     this.setState(newState);
+  };
+
+  themes = {
+    plain: {
+      name: "Plain",
+      background: "#FFFFFF",
+      border: "#FFFFFF"
+    },
+    st: {
+      name: "ST",
+      background: "#E3E7FE",
+      border: "#273CB4"
+    }
   };
 
   render() {
     return (
       <div>
+        <h2>Composed Pups</h2>
         <LocalizerProvider value={this.state.locale}>
           <ColorizerProvider value={this.state.theme}>
             <PuppyStats avgWeight={3} avgLength={10} />
@@ -64,19 +78,11 @@ class Example3 extends React.Component {
         <Dropdown
           options={[
             {
-              value: {
-                name: "Plain",
-                background: "#FFFFFF",
-                border: "#FFFFFF"
-              },
+              value: "plain",
               label: "Plain"
             },
             {
-              value: {
-                name: "ST",
-                background: "#E3E7FE",
-                border: "#273CB4"
-              },
+              value: "st",
               label: "ST"
             }
           ]}

@@ -27,6 +27,7 @@ class Example2 extends React.Component {
   render() {
     return (
       <div>
+        <h2>Smarter Pups</h2>
         <LocalizerProvider value={this.state.locale}>
           <div style={{ width: "300px" }}>
             <Img src="http://i.cubeupload.com/00SevS.jpeg" />
