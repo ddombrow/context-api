@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Provider, Subscribe } from "unstated";
+import { Provider } from "../../lib/overstated";
 import PuppyStats from "./shared/PuppyStats";
 import PuppyControls from "./PuppyControls";
 

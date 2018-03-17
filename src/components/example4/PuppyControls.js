@@ -1,7 +1,7 @@
 import React from "react";
 import ThemeContainer from "../../lib/state-containers/theme";
 import LocaleContainer from "../../lib/state-containers/locale";
-import { Subscribe } from "unstated";
+import { Subscribe } from "../../lib/overstated";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 

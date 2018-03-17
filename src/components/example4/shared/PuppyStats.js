@@ -4,7 +4,7 @@ import DistanceDisplay from "./DistanceDisplay";
 import WeightDisplay from "./WeightDisplay";
 import ThemeContainer from "../../../lib/state-containers/theme";
 import LocaleContainer from "../../../lib/state-containers/locale";
-import { Subscribe } from "unstated";
+import { Subscribe } from "../../../lib/overstated";
 
 const PuppyStats = props => {
   return (

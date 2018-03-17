@@ -1,4 +1,4 @@
-import { Container } from "unstated";
+import { Container } from "../overstated";
 
 class LocaleContainer extends Container {
   state = {
