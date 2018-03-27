@@ -1,6 +1,6 @@
 import React from "react";
-import DistanceDisplay from "./shared/DistanceDisplay";
-import WeightDisplay from "./shared/WeightDisplay";
+import DistanceDisplay from "./DistanceDisplay";
+import WeightDisplay from "./WeightDisplay";
 import Img from "react-image";
 
 const PuppyStats = function() {

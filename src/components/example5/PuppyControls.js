@@ -22,13 +22,17 @@ class PuppyControls extends React.Component {
   };
 
   render() {
+    const { locale, theme } = store.state;
+    console.log(theme);
     return (
       <div>
         Weight:
         <Dropdown
           options={["metric", "imperial"]}
-          onChange={e => store.actions.setWeight(e.value)}
-          value={store.weight}
+          onChange={e => {
+            store.actions.setWeight(e.value);
+          }}
+          value={locale.weight}
           defaultOption={""}
           placeholder="Select an option"
         />
@@ -37,7 +41,7 @@ class PuppyControls extends React.Component {
         <Dropdown
           options={["metric", "imperial"]}
           onChange={e => store.actions.setDistance(e.value)}
-          value={store.distance}
+          value={locale.distance}
           placeholder="Select an option"
         />
         <br />
@@ -46,15 +50,15 @@ class PuppyControls extends React.Component {
           options={[
             {
               value: "plain",
-              label: "Plain"
+              label: "plain"
             },
             {
               value: "st",
-              label: "ST"
+              label: "st"
             }
           ]}
           onChange={e => store.actions.setTheme(this.themes[e.value])}
-          value={null}
+          value={theme.key}
           placeholder="Select an option"
         />
       </div>

@@ -10,8 +10,9 @@ class Example5 extends React.Component {
     return (
       <div>
         <h2>Global Pups</h2>
-        <Provider {...store}>
+        <Provider store={store}>
           <PuppyStats avgWeight={3} avgLength={10} />
+          <br />
           <PuppyControls />
         </Provider>
         <br />

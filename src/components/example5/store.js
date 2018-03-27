@@ -12,10 +12,17 @@ const store = {
     }
   },
   actions: {
-    setWeight: weight => state => Object.assign({}, state, { weight }),
-    setDistance: distance => state => Object.assign({}, state, { distance }),
-    setTheme: theme => state => Object.assign({}, state, { theme: { ...theme } })
+    setWeight: weight => state => ({
+      ...state,
+      locale: { ...state.locale, weight: weight }
+    }),
+    setDistance: distance => state => ({
+      ...state,
+      locale: { ...state.locale, distance: distance }
+    }),
+    setTheme: theme => state => ({ ...state, theme: { ...theme } })
   }
 };
 
-export default createStore(store);
+const externalStore = createStore(store);
+export default externalStore;

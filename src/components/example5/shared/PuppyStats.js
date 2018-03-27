@@ -6,13 +6,11 @@ import { subscribe } from "react-contextual";
 import store from "../store";
 
 const PuppyStats = props => {
-  const theme = { state: { background: "", border: "" } };
-  const locale = { state: { weight: "", distance: "" } };
   const themedStyles = {
     width: "300px",
     padding: "10px",
-    backgroundColor: theme.state.background,
-    border: `solid ${theme.state.border} 1px`
+    backgroundColor: props.theme.background,
+    border: `solid ${props.theme.border} 1px`
   };
 
   return (
@@ -20,8 +18,8 @@ const PuppyStats = props => {
       <Img src="http://i.cubeupload.com/00SevS.jpeg" />
       <strong>Stats for these puppies:</strong>
       <br />
-      Average Weight: <WeightDisplay value={props.avgWeight} format={locale.state.weight} /> <br />
-      Average Length: <DistanceDisplay value={props.avgLength} format={locale.state.distance} />
+      Average Weight: <WeightDisplay value={props.avgWeight} format={props.locale.weight} /> <br />
+      Average Length: <DistanceDisplay value={props.avgLength} format={props.locale.distance} />
       <br />
     </div>
   );
