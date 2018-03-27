@@ -1,0 +1,17 @@
+const ThemeCtx = React.createContext("light");
+
+class App extends React.Component {
+    render() {
+        return (
+            <ThemeCtx.Provider>
+                <ThemeCtx.Consumer value={someValue}>
+                    {theme => (
+                        <h1 style={{color: theme === 'light' ? '#000' : '#fff'}}>
+                           Sup.
+                        </h1>
+                    )}
+                </ThemeCtx.Consumer>
+            </ThemeCtx.Provider>
+        )
+    }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import convert from "convert-units";
 import PropTypes from "prop-types";
+import _ from "lodash";
 
 const unitLabels = {
   metric: "kg",
