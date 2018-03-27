@@ -23,7 +23,6 @@ class PuppyControls extends React.Component {
 
   render() {
     const { locale, theme } = store.state;
-    console.log(theme);
     return (
       <div>
         Weight:
