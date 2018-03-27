@@ -9,7 +9,7 @@ class Example5 extends React.Component {
   render() {
     return (
       <div>
-        <h2>Global Pups</h2>
+        <h2>Contextual Pups</h2>
         <Provider store={store}>
           <PuppyStats avgWeight={3} avgLength={10} />
           <br />

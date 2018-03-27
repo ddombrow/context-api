@@ -48,6 +48,9 @@ class App extends React.Component {
             <Route exact path="/example5" component={Example5} />
           </div>
         </Router>
+        <br />
+        <br />
+        <br />
       </div>
     );
   }

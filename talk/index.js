@@ -63,10 +63,11 @@ const Root = () => (
   <Presentation theme={theme} progress={"pacman"}>
     <Slide>
       <Heading>Context Without Constraint</Heading>
+      <br />
       <CodePane lang="js" textSize={32} source={require("raw!./assets/context.example")} />
     </Slide>
     <Slide>
-      <Heading>What's it for?</Heading>
+      <Heading>What's a context?</Heading>
       <List>
         <ListItem>To pass data down through the react render tree without passing props.</ListItem>
         <ListItem>
@@ -74,6 +75,7 @@ const Root = () => (
           tree. Example: React Router
         </ListItem>
       </List>
+      <Link href="https://reactjs.org/docs/context.html">React Docs</Link>
     </Slide>
     <Slide>
       <Heading>Some Examples</Heading>
@@ -161,9 +163,26 @@ const Root = () => (
       </Heading>
     </Slide>
     <Slide>
+      <Heading>When would you use unstated?</Heading>
+      <List>
+        <ListItem>You want to use context to manage a reasonable amount of global state.</ListItem>
+        <ListItem>
+          If you like the setState API and want to use it to manage all state in your app.
+        </ListItem>
+      </List>
+    </Slide>
+    <Slide>
       <Heading>
         Sixth demo:<br /> react-contextual
       </Heading>
+    </Slide>
+    <Slide>
+      <Heading>When would you use react-contextual?</Heading>
+      <List>
+        <ListItem>You want to use context to manage a reasonable amount of global state.</ListItem>
+        <ListItem>If you like a more reduxy API.</ListItem>
+        <ListItem>You're quite sure you won't need redux.</ListItem>
+      </List>
     </Slide>
     <Slide>
       <Heading>Questions?</Heading>
