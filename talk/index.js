@@ -132,7 +132,7 @@ const Root = () => (
       </Heading>
     </Slide>
     <Slide>
-      <Heading>Verdict</Heading>
+      <Heading>The Verdict</Heading>
       <List>
         <ListItem>Solves the import problems with the old API.</ListItem>
         <ListItem>
@@ -193,6 +193,9 @@ const Root = () => (
       <BlockQuote>We're hiring!</BlockQuote>
       <Link href="https://jobs.socialtables.com">jobs.socialtables.com</Link>
       <Text>daniel@socialtables.com / @crunchnode</Text>
+      <Link href="http://github.com/ddombrow/context-api">
+        Demos/Slides: github.com/ddombrow/context-api
+      </Link>
     </Slide>
   </Presentation>
 );
