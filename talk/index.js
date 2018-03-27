@@ -110,7 +110,7 @@ const Root = () => (
     </Slide>
     <Slide>
       <Heading>
-        First demo:<br /> Old API
+        Demo Zero:<br /> Old API
       </Heading>
     </Slide>
     <Slide>
@@ -119,7 +119,7 @@ const Root = () => (
     </Slide>
     <Slide>
       <Heading>
-        Second and Third demo:<br /> New API
+        First and second demo:<br /> New API
       </Heading>
     </Slide>
     <Slide>
@@ -128,7 +128,7 @@ const Root = () => (
     </Slide>
     <Slide>
       <Heading>
-        Fourth demo:<br /> Composing
+        Third demo:<br /> Composing
       </Heading>
     </Slide>
     <Slide>
@@ -159,7 +159,7 @@ const Root = () => (
     </Slide>
     <Slide>
       <Heading>
-        Fifth demo:<br /> unstated
+        Fourth demo:<br /> unstated
       </Heading>
     </Slide>
     <Slide>
@@ -167,20 +167,20 @@ const Root = () => (
       <List>
         <ListItem>You want to use context to manage a reasonable amount of global state.</ListItem>
         <ListItem>
-          If you like the setState API and want to use it to manage all state in your app.
+          You like the setState API and want to use it to manage all state in your app.
         </ListItem>
       </List>
     </Slide>
     <Slide>
       <Heading>
-        Sixth demo:<br /> react-contextual
+        Fifth demo:<br /> react-contextual
       </Heading>
     </Slide>
     <Slide>
       <Heading>When would you use react-contextual?</Heading>
       <List>
         <ListItem>You want to use context to manage a reasonable amount of global state.</ListItem>
-        <ListItem>If you like a more reduxy API.</ListItem>
+        <ListItem>You like a more reduxy API.</ListItem>
         <ListItem>You're quite sure you won't need redux.</ListItem>
       </List>
     </Slide>
@@ -190,9 +190,9 @@ const Root = () => (
     </Slide>
     <Slide>
       <Image width={"600px"} src={stLogo} />
-      <br />
       <BlockQuote>We're hiring!</BlockQuote>
       <Link href="https://jobs.socialtables.com">jobs.socialtables.com</Link>
+      <Text>daniel@socialtables.com / @crunchnode</Text>
     </Slide>
   </Presentation>
 );
