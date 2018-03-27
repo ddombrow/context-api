@@ -1,6 +1,6 @@
 import React from "react";
 import "react-dropdown/style.css";
-import PuppyStats from "./PuppyStats";
+import PuppyStats from "./shared/PuppyStats";
 import PropTypes from "prop-types";
 
 class Example0 extends React.Component {
