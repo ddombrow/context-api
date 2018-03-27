@@ -1,5 +1,5 @@
 //see https://github.com/jamiebuilds/unstated/blob/master/src/unstated.js for the real deal, this is just an annotated clone
-import React, { type Node } from "react";
+import React from "react";
 
 const StateContext = React.createContext(null);
 
