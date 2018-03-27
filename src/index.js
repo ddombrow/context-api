@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Example0 from "./components/example0";
 import Example1 from "./components/example1";
 import Example2 from "./components/example2";
 import Example3 from "./components/example3";
@@ -18,6 +19,9 @@ class App extends React.Component {
                 <Link to="/">Home</Link>
               </li>
               <li>
+                <Link to="/example0">Old Pups</Link>
+              </li>
+              <li>
                 <Link to="/example1">Naive Pups</Link>
               </li>
               <li>
@@ -32,6 +36,7 @@ class App extends React.Component {
             </ul>
 
             <Route exact path="/" component={Home} />
+            <Route exact path="/example0" component={Example0} />
             <Route exact path="/example1" component={Example1} />
             <Route exact path="/example2" component={Example2} />
             <Route exact path="/example3" component={Example3} />
@@ -46,7 +51,7 @@ class App extends React.Component {
 const Home = () => (
   <div>
     <h1>Time for some demos!</h1>
-    <h2>Puppy stats 4 ways.</h2>
+    <h2>Puppy stats 6 ways.</h2>
   </div>
 );
 
